@@ -1,8 +1,8 @@
 .sidebar {
-   
+
 
     position: fixed;
-    
+
 
     width: 290px;
     top: 0;
@@ -15,6 +15,7 @@
     overflow-y: scroll;
     background: $grey-color3;
 
+
     &__nav {
         width: 100%;
 
@@ -25,7 +26,7 @@
                 width: 100%;
 
                 font-size: 1.8rem;
-              
+
                 border-bottom: 2px solid $grey-color2;
                 margin-bottom: 1rem;
 
@@ -39,31 +40,34 @@
                     width: 100%;
 
                     // font-size: ;
-                    
+
                     padding: 1rem;
-                    margin-left: -1rem ;
+                    margin-left: -1rem;
                     color: $black-color;
-                    
+
                     i {
                         margin-right: 1rem;
                         font-size: 2rem;
                         width: 2rem;
                     }
+
                     span {
                         text-align: left;
                     }
-                  
+
                 }
-                &:hover > a{
+
+                &:hover>a {
                     color: $orange-color;
-                    
+
                 }
+
                 &--noicon {
-                   font-weight: 700;
-                   user-select: none;
-                   pointer-events: none;
+                    font-weight: 700;
+                    user-select: none;
+                    pointer-events: none;
                 }
-                
+
             }
 
             &__grid {
@@ -76,31 +80,32 @@
                     color: $grey-color;
                 }
             }
-           
+
         }
     }
+
     &::-webkit-scrollbar {
         width: 0.6rem;
     }
-    
+
     &::-webkit-scrollbar-track {
         background-color: #e5dfdf;
     }
-    
+
     &::-webkit-scrollbar-thumb {
         background: #8c8790;
         border-radius: 50px;
     }
+
     @include responsive(tablet-large) {
-        padding: 7rem 2rem; 
+        padding: 7rem 2rem;
         display: none;
         z-index: 11;
-       left: 0;
-       
+        left: 0;
+
     }
+
     &.show {
         display: block;
     }
 }
-
-

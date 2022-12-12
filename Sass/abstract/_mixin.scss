@@ -26,12 +26,12 @@
     }
 }
 
-@mixin bigText($size) {
-    font-size: $size;
-}
+
 @mixin titleText($size) {
     font-size: $size;
+    font-weight: 600;
+    line-height: 4rem;
+    text-align: left;
+    color: $orange-color;
 }
-@mixin smallText($size) {
-    font-size: $size;
-}
+

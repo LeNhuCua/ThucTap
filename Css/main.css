@@ -43,9 +43,11 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   margin-left: 29rem;
   padding: 7rem 2rem;
-  height: 10000px;
   background: #fff;
 }
 @media screen and (max-width: 1200px) {
@@ -106,7 +108,7 @@ body li {
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
-    max-width: 720px;
+    max-width: 742px;
   }
 }
 @media (min-width: 992px) {
@@ -1196,69 +1198,6 @@ body li {
     --bs-gutter-y: 3rem;
   }
 }
-#menu-btn {
-  display: flex;
-  align-items: center;
-  position: fixed !important;
-  z-index: 9999 !important;
-  top: 1rem;
-  left: 2%;
-  width: 4rem;
-  min-height: 4rem;
-  display: none;
-  margin-right: 1rem;
-  background: red;
-  padding: 0.4rem;
-  cursor: pointer;
-}
-#menu-btn span::after, #menu-btn span::before {
-  content: "";
-  position: absolute;
-  top: 0.7rem;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  transition: all 0.3s;
-  transform: rotate(0deg);
-}
-#menu-btn span {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 0.15rem;
-  background: #fff;
-}
-#menu-btn span::after {
-  top: -0.7rem;
-}
-#menu-btn:hover span::before {
-  top: 1rem;
-}
-#menu-btn:hover span::after {
-  top: -1rem;
-}
-#menu-btn.active span {
-  background: transparent;
-}
-#menu-btn.active span::before {
-  transform: rotate(45deg);
-  top: 50%;
-  background: #fff;
-}
-#menu-btn.active span::after {
-  transform: rotate(-45deg);
-  top: -50%;
-  background: #fff;
-}
-@media screen and (max-width: 1200px) {
-  #menu-btn {
-    display: flex;
-    align-items: center;
-    z-index: 20000000000000000000 !important;
-  }
-}
-
 .header {
   position: fixed;
   z-index: 10;
@@ -1296,7 +1235,6 @@ body li {
     display: flex;
     align-items: center;
     width: auto;
-    padding-left: 11%;
   }
 }
 .header__content--logo img {
@@ -1448,6 +1386,53 @@ body li {
   display: block;
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: #fff;
+  text-align: center;
+  margin-left: 29rem;
+  padding: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .footer {
+    margin-left: 0;
+  }
+}
+.footer__logo {
+  width: 100%;
+}
+.footer__logo img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+}
+.footer__menu li {
+  position: relative;
+  display: inline;
+  line-height: 1.4rem;
+}
+.footer__menu li:not(:first-child) {
+  margin-left: 1.6rem;
+}
+.footer__menu li a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgb(10, 10, 10);
+}
+.footer__menu li:hover a {
+  color: #c35854;
+}
+.footer__menu li.sub {
+  font-weight: 700;
+}
+.footer__copy {
+  font-size: 1.4rem;
+  color: rgb(10, 10, 10);
+}
+
 .form {
   display: flex;
   align-items: center;
@@ -1550,7 +1535,7 @@ body li {
   transform: all 0.5s;
 }
 .form__body form button:hover {
-  background: rgb(185, 185, 104);
+  background: #ecc761;
 }
 .form__footer {
   width: 100%;
@@ -1567,6 +1552,64 @@ body li {
 .form__footer a {
   color: #c35854;
   cursor: pointer;
+}
+
+.social-network {
+  width: 100%;
+}
+.social-network__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.social-network__list .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: #fff;
+  background-color: var(--i);
+  font-size: 1.2rem;
+  padding: 1rem 1.2rem;
+  line-height: 1rem;
+  transition: all 0.5s;
+}
+.social-network__list .item:hover {
+  transform: translateY(-0.7rem);
+}
+@media screen and (max-width: 1200px) {
+  .social-network__list .item span {
+    display: none;
+  }
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+.home-container__heading {
+  display: flex;
+}
+.home-container__heading h3 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 4rem;
+  text-align: left;
+  color: #c35854;
+}
+.home-container__heading a {
+  font-size: 1.6rem;
+  color: rgb(10, 10, 10);
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.home-container__heading a:hover {
+  color: #c35854;
 }
 
 .loading {
@@ -1603,6 +1646,216 @@ body li {
 }
 .form-login.show, .show.form-forgetpass, .show.form-register {
   top: 50%;
+}
+
+#menu-btn span::after, #menu-close-btn span::after, #menu-btn span::before, #menu-close-btn span::before {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transition: all 0.3s;
+  transform: rotate(0deg);
+}
+
+#menu-btn, #menu-close-btn {
+  display: flex;
+  align-items: center;
+  position: relative !important;
+  z-index: 9999 !important;
+  width: 4rem;
+  min-height: 4rem;
+  display: none;
+  margin-right: 1rem;
+  background: red;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+#menu-btn span, #menu-close-btn span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 0.15rem;
+  background: #fff;
+  transition: all 0.9s;
+}
+#menu-btn span::after, #menu-close-btn span::after {
+  top: -0.7rem;
+}
+#menu-btn:hover span::before, #menu-close-btn:hover span::before {
+  top: 1rem;
+}
+#menu-btn:hover span::after, #menu-close-btn:hover span::after {
+  top: -1rem;
+}
+#menu-btn.active span, .active#menu-close-btn span {
+  background: transparent;
+}
+#menu-btn.active span::before, .active#menu-close-btn span::before {
+  transform: rotate(45deg);
+  top: 50%;
+  background: #fff;
+}
+#menu-btn.active span::after, .active#menu-close-btn span::after {
+  transform: rotate(-45deg);
+  top: -50%;
+  background: #fff;
+}
+@media screen and (max-width: 1200px) {
+  #menu-btn, #menu-close-btn {
+    display: flex;
+    align-items: center;
+    z-index: 20000000000000000000 !important;
+  }
+}
+
+#menu-close-btn {
+  position: absolute !important;
+  top: 1rem;
+  left: 1rem;
+}
+#menu-close-btn span {
+  background: transparent;
+}
+#menu-close-btn span::before {
+  transform: rotate(45deg);
+  top: 50%;
+}
+#menu-close-btn span::after {
+  transform: rotate(-45deg);
+  top: -50%;
+}
+#menu-close-btn:hover span::before {
+  top: 0rem;
+  transform: rotate(50deg);
+}
+#menu-close-btn:hover span::after {
+  top: 0rem;
+  transform: rotate(-50deg);
+}
+
+.card-firm {
+  position: relative;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+}
+.card-firm__main {
+  position: relative;
+  width: 100%;
+}
+.card-firm__main .poster {
+  width: 100%;
+}
+.card-firm__main .poster img {
+  width: 100%;
+  object-fit: cover;
+}
+.card-firm__main .quality {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 101;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: rgb(10, 10, 10);
+  background: linear-gradient(to right, rgb(190, 236, 190), rgb(24, 163, 24));
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+}
+.card-firm__main .play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 25, 51, 0.6);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.card-firm__main .play i {
+  font-size: 6rem;
+}
+.card-firm__main:hover .play {
+  opacity: 1;
+}
+.card-firm__name {
+  width: 100%;
+  color: rgb(10, 10, 10);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.card-firm__name:hover {
+  color: #c35854;
+}
+.card-firm__info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1.4rem;
+}
+.card-firm__info .item:not(:first-child) {
+  margin-left: 1rem;
+  color: #393939;
+}
+.card-firm__info .item.star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ecc761;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+}
+.card-firm__info i {
+  font-size: 0.6rem;
+  color: rgb(10, 10, 10);
+}
+
+.slider-container {
+  position: relative;
+  padding: 1rem 0rem;
+}
+.slider-container button {
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  transform: translateY(-100%);
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  cursor: pointer;
+}
+.slider-container button i {
+  font-size: 2rem;
+}
+.slider-container button:hover {
+  background: #c35854;
+}
+.slider-container button.pre-btn {
+  left: 0;
+}
+.slider-container button.nxt-btn {
+  right: 0;
+}
+
+.swiper {
+  width: 100%;
+  padding: 1rem 0px !important;
 }
 
 /*# sourceMappingURL=main.css.map */

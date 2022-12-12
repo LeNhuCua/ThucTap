@@ -22,9 +22,12 @@ main {
         padding: 11rem 0;
         margin-left: 0px;
     }
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     margin-left: 29rem;
     padding: 7rem 2rem;
-    height: 10000px;
+  
     background: $white-color;
   
 }
