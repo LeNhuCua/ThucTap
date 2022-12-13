@@ -1,0 +1,4 @@
+sass ./Sass/main.scss Css/main.css --watch
+npm install -g pug
+npm install -g pug-cli
+pug View/index.pug --watch --pretty
