@@ -1,7 +1,7 @@
-quantri:id,taikhoan,matkhau,quyen,sodienthoai,email,anh
+quantri:id,taikhoan,matkhau,ten,quyen,sodienthoai,email,anh
 khachhang:id,taikhoan,matkhau,ten,sodienthoai,email,anh
 theloai:id,tentheloai(anime,hanhdong,phieuluu)
 nam:id,nam(1992,2002,2001)
-phim: id,tenphim,chatluong,thoiluong,tongsotap,ngaycapnhat,mota,anhbia,idnam,idtheloai
+phim: id,tenphim,chatluong,thoiluong,tongsotap,ngaycapnhat,mota,anhbia,idnam,idtheloai,trailer
 tap:id,tentap,duongdan,idphim
-binhluan:id,idkhachhang,idtap,noidung 4khoachinh
+binhluan:id,idkhachhang,idtap,noidung

@@ -8,118 +8,16 @@ block main
             button.nxt-btn
                 i.fa-solid.fa-chevron-right
         .swiper-wrapper.slider
-            .swiper-slide.card-slider
-                .card-firm
-                    a.card-firm__main(href='')
-                        .poster
-                            img(src='../Images/anh1.jpg' alt='')
-                        .quality HD
-                        .play
-                            i.fa-solid.fa-play
-                    a.card-firm__name(href='') Name
-                    .card-firm__info
-                        span.item.star 8
-                        span.item 2022
-                        i.item.fa-solid.fa-circle
-                        span.item 117m
-            .swiper-slide.card-slider
-                .card-firm
-                    a.card-firm__main(href='')
-                        .poster
-                            img(src='../Images/anh1.jpg' alt='')
-                        .quality HD
-                        .play
-                            i.fa-solid.fa-play
-                    a.card-firm__name(href='') Name
-                    .card-firm__info
-                        span.item.star 8
-                        span.item 2022
-                        i.item.fa-solid.fa-circle
-                        span.item 117m
-            .swiper-slide.card-slider
-                .card-firm
-                    a.card-firm__main(href='')
-                        .poster
-                            img(src='../Images/anh1.jpg' alt='')
-                        .quality HD
-                        .play
-                            i.fa-solid.fa-play
-                    a.card-firm__name(href='') Name
-                    .card-firm__info
-                        span.item.star 8
-                        span.item 2022
-                        i.item.fa-solid.fa-circle
-                        span.item 117m
-            .swiper-slide.card-slider
-                .card-firm
-                    a.card-firm__main(href='')
-                        .poster
-                            img(src='../Images/anh1.jpg' alt='')
-                        .quality HD
-                        .play
-                            i.fa-solid.fa-play
-                    a.card-firm__name(href='') Name
-                    .card-firm__info
-                        span.item.star 8
-                        span.item 2022
-                        i.item.fa-solid.fa-circle
-                        span.item 117m
-            .swiper-slide.card-slider
-                .card-firm
-                    a.card-firm__main(href='')
-                        .poster
-                            img(src='../Images/anh1.jpg' alt='')
-                        .quality HD
-                        .play
-                            i.fa-solid.fa-play
-                    a.card-firm__name(href='') Name
-                    .card-firm__info
-                        span.item.star 8
-                        span.item 2022
-                        i.item.fa-solid.fa-circle
-                        span.item 117m
-            .swiper-slide.card-slider
-                .card-firm
-                    a.card-firm__main(href='')
-                        .poster
-                            img(src='../Images/anh1.jpg' alt='')
-                        .quality HD
-                        .play
-                            i.fa-solid.fa-play
-                    a.card-firm__name(href='') Name
-                    .card-firm__info
-                        span.item.star 8
-                        span.item 2022
-                        i.item.fa-solid.fa-circle
-                        span.item 117m
-            .swiper-slide.card-slider
-                .card-firm
-                    a.card-firm__main(href='')
-                        .poster
-                            img(src='../Images/anh1.jpg' alt='')
-                        .quality HD
-                        .play
-                            i.fa-solid.fa-play
-                    a.card-firm__name(href='') Name
-                    .card-firm__info
-                        span.item.star 8
-                        span.item 2022
-                        i.item.fa-solid.fa-circle
-                        span.item 117m
-            .swiper-slide.card-slider
-                .card-firm
-                    a.card-firm__main(href='')
-                        .poster
-                            img(src='../Images/anh1.jpg' alt='')
-                        .quality HD
-                        .play
-                            i.fa-solid.fa-play
-                    a.card-firm__name(href='') Name
-                    .card-firm__info
-                        span.item.star 8
-                        span.item 2022
-                        i.item.fa-solid.fa-circle
-                        span.item 117m
+           .swiper-slide.card-slider
+               +film("../Images/anh1.jpg","Ten phim","2021","120 phut","9")   
+           .swiper-slide.card-slider
+               +film("../Images/anh1.jpg","Ten phim","2022","117 phut","2")
+           .swiper-slide.card-slider
+               +film("../Images/anh1.jpg","Ten phim","2021","120 phut","1") 
+           .swiper-slide.card-slider
+               +film("../Images/anh1.jpg","Ten phim","2021","120 phut","3")
+           .swiper-slide.card-slider
+               +film("../Images/anh3.jpg","Ten phim","2021","120 phut","5")    
     section.social-network
         nav.social-network__list
             a.item(href='' style='--i:#1DA1F2;')
@@ -153,114 +51,26 @@ block main
         .home-container__main
             .row.gy-5
                 .col-xl-2.col-lg-2.col-md-3.col-sm-6.col-6
-                    .film-list
-                        .card-firm
-                            a.card-firm__main(href='')
-                                .poster
-                                    img(src='../Images/anh1.jpg' alt='')
-                                .quality HD
-                                .play
-                                    i.fa-solid.fa-play
-                            a.card-firm__name(href='') Name
-                            .card-firm__info
-                                span.item 2022
-                                i.item.fa-solid.fa-circle
-                                span.item 117m
+                    .film-item
+                        +film("../Images/anh1.jpg","Ten phim","2021","120 phut") 
                 .col-xl-2.col-lg-2.col-md-3.col-sm-6.col-6
-                    .film-list
-                        .card-firm
-                            a.card-firm__main(href='')
-                                .poster
-                                    img(src='../Images/anh1.jpg' alt='')
-                                .quality HD
-                                .play
-                                    i.fa-solid.fa-play
-                            a.card-firm__name(href='') Name
-                            .card-firm__info
-                                span.item 2022
-                                i.item.fa-solid.fa-circle
-                                span.item 117m
+                    .film-item
+                         +film("../Images/anh1.jpg","Ten phim","2021","120 phut")                    
                 .col-xl-2.col-lg-2.col-md-3.col-sm-6.col-6
-                    .film-list
-                        .card-firm
-                            a.card-firm__main(href='')
-                                .poster
-                                    img(src='../Images/anh1.jpg' alt='')
-                                .quality HD
-                                .play
-                                    i.fa-solid.fa-play
-                            a.card-firm__name(href='') Name
-                            .card-firm__info
-                                span.item 2022
-                                i.item.fa-solid.fa-circle
-                                span.item 117m
+                    .film-item
+                        +film("../Images/anh1.jpg","Ten phim","2021","120 phut") 
                 .col-xl-2.col-lg-2.col-md-3.col-sm-6.col-6
-                    .film-list
-                        .card-firm
-                            a.card-firm__main(href='')
-                                .poster
-                                    img(src='../Images/anh1.jpg' alt='')
-                                .quality HD
-                                .play
-                                    i.fa-solid.fa-play
-                            a.card-firm__name(href='') Name
-                            .card-firm__info
-                                span.item 2022
-                                i.item.fa-solid.fa-circle
-                                span.item 117m
+                    .film-item
+                        +film("../Images/anh1.jpg","Ten phim","2021","120 phut") 
                 .col-xl-2.col-lg-2.col-md-3.col-sm-6.col-6
-                    .film-list
-                        .card-firm
-                            a.card-firm__main(href='')
-                                .poster
-                                    img(src='../Images/anh1.jpg' alt='')
-                                .quality HD
-                                .play
-                                    i.fa-solid.fa-play
-                            a.card-firm__name(href='') Name
-                            .card-firm__info
-                                span.item 2022
-                                i.item.fa-solid.fa-circle
-                                span.item 117m
+                    .film-item
+                        +film("../Images/anh1.jpg","Ten phim","2021","120 phut") 
                 .col-xl-2.col-lg-2.col-md-3.col-sm-6.col-6
-                    .film-list
-                        .card-firm
-                            a.card-firm__main(href='')
-                                .poster
-                                    img(src='../Images/anh1.jpg' alt='')
-                                .quality HD
-                                .play
-                                    i.fa-solid.fa-play
-                            a.card-firm__name(href='') Name
-                            .card-firm__info
-                                span.item 2022
-                                i.item.fa-solid.fa-circle
-                                span.item 117m
+                    .film-item
+                        +film("../Images/anh1.jpg","Ten phim","2021","120 phut") 
                 .col-xl-2.col-lg-2.col-md-3.col-sm-6.col-6
-                    .film-list
-                        .card-firm
-                            a.card-firm__main(href='')
-                                .poster
-                                    img(src='../Images/anh1.jpg' alt='')
-                                .quality HD
-                                .play
-                                    i.fa-solid.fa-play
-                            a.card-firm__name(href='') Name
-                            .card-firm__info
-                                span.item 2022
-                                i.item.fa-solid.fa-circle
-                                span.item 117m
+                    .film-item
+                        +film("../Images/anh3.jpg","Ten phim","2021","120 phut") 
                 .col-xl-2.col-lg-2.col-md-3.col-sm-6.col-6
-                    .film-list
-                        .card-firm
-                            a.card-firm__main(href='')
-                                .poster
-                                    img(src='../Images/anh1.jpg' alt='')
-                                .quality HD
-                                .play
-                                    i.fa-solid.fa-play
-                            a.card-firm__name(href='') Name
-                            .card-firm__info
-                                span.item 2022
-                                i.item.fa-solid.fa-circle
-                                span.item 117m
+                    .film-item
+                        +film("../Images/anh2.jpg","Ten phim","2021","120 phut","100") 
